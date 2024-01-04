@@ -1,0 +1,27 @@
+import {  Socket } from 'socket.io'; // Import the WebSocket and Socket classes from your WebSocket library
+
+export class UserManager {
+    private users: {
+        roomID: string,
+        socket: Socket,
+    }[];
+
+    constructor() {
+        this.users = [];
+    }
+
+    addUser(roomID: string, socket: Socket) {
+        this.users.push({
+            socket,
+            roomID 
+        });
+        this.createHandlers(roomID, socket); // Fix the argument names here
+    }
+
+    private createHandlers(roomID: string, socket: Socket) {
+        socket.on('submission',(data)=>{
+            if(data.)
+        })
+       
+    }
+}
